@@ -14,4 +14,4 @@ target_link_libraries(MenuDemo duilib)
 
 add_custom_command(TARGET MenuDemo POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy_if_different
-  ${PROJECT_BINARY_DIR}/bin/MenuDemo.exe ${PROJECT_SOURCE_DIR}/bin/MenuDemo.exe)
+  $<TARGET_FILE:MenuDemo> ${PROJECT_SOURCE_DIR}/bin/MenuDemo.exe)

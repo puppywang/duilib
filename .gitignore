@@ -1,3 +1,6 @@
+# CMake gen path
+build/
+
 # Compiled Object files
 *.slo
 *.lo

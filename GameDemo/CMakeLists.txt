@@ -13,4 +13,4 @@ set_target_properties(GameDemo PROPERTIES LINK_FLAGS "/SUBSYSTEM:WINDOWS")
 
 add_custom_command(TARGET GameDemo POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy_if_different
-  ${PROJECT_BINARY_DIR}/bin/GameDemo.exe ${PROJECT_SOURCE_DIR}/bin/GameDemo.exe)
+  $<TARGET_FILE:GameDemo> ${PROJECT_SOURCE_DIR}/bin/GameDemo.exe)

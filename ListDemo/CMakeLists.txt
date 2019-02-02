@@ -13,4 +13,4 @@ set_target_properties(ListDemo PROPERTIES LINK_FLAGS "/SUBSYSTEM:WINDOWS")
 
 add_custom_command(TARGET ListDemo POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy_if_different
-  ${PROJECT_BINARY_DIR}/bin/ListDemo.exe ${PROJECT_SOURCE_DIR}/bin/ListDemo.exe)
+  $<TARGET_FILE:ListDemo> ${PROJECT_SOURCE_DIR}/bin/ListDemo.exe)

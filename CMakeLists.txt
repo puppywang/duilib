@@ -10,6 +10,9 @@ cmake_minimum_required(VERSION 2.8)
 
 project(dui)
 
+add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+
 message(STATUS," CMake project files for duilib")
 
 # this line is for UNICODE release,which is required by DuiDesigner 
